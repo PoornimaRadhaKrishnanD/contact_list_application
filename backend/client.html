@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact List Application</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        form {
+            background: white;
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+        input[type="text"], input[type="email"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px solid #ccc;
+        }
+        input[type="submit"] {
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: 0.3s;
+            flex-grow: 1;
+            margin: 5px;
+            text-align: center;
+        }
+        input[value="Save Contact"] {
+            background: #28a745;
+        }
+        input[value="Show Contact"] {
+            background: #17a2b8;
+        }
+        input[value="Show All Contacts"] {
+            background: #ffc107;
+        }
+        input[value="Update Contact"] {
+            background: #007bff;
+        }
+        input[value="Delete Contact"] {
+            background: #dc3545;
+        }
+        input[type="submit"]:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <h1>Contact List Application</h1>
+    <form>
+        <label>Name:</label>
+        <input type="text" name="name">
+        
+        <label>Phone:</label>
+        <input type="text" name="phone" required>
+
+        <label>Email:</label>
+        <input type="email" name="email">
+
+        <div class="button-container">
+            <input formaction="http://localhost:8080/save" formmethod="post" type="submit" value="Save Contact">
+            <input formaction="http://localhost:8080/show" formmethod="get" type="submit" value="Show Contact">
+            <input formaction="http://localhost:8080/showall" formmethod="get" type="submit" value="Show All Contacts">
+            <input formaction="http://localhost:8080/update" formmethod="post" type="submit" value="Update Contact">
+            <input formaction="http://localhost:8080/delete" formmethod="post" type="submit" value="Delete Contact">
+        </div>
+    </form>
+</body>
+</html>

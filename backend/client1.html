@@ -1,0 +1,16 @@
+<html>
+    <head><title>MongoDB Data</title></head>
+    <body>
+        <form >
+           Roll Number: <input type="text" name="rno"> <br><br> 
+           Name: <input type="text" name="name"> <br><br>
+           Age:  <input type="text" name="age"><br><br>
+           GPA:  <input type="text" name="gpa"><br><br>
+            <input formaction="http://localhost:8080/save" formmethod="post" type="submit" value="Save">     
+            <input formaction="http://localhost:8080/show" formmethod="get" type="submit" value="Show">   
+            <input formaction="http://localhost:8080/showall" formmethod="get" type="submit" value="Show All">   
+            <input formaction="http://localhost:8080/update" formmethod="post" type="submit" value="Update">   
+            <input formaction="http://localhost:8080/delete" formmethod="post" type="submit" value="Delete">   
+        </form>
+    </body>
+</html>
